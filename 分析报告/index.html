@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<style type="text/css">
+		table{
+			text-align: center;
+			margin-top: 20px;
+		}
+		thead{
+			text-align: center;
+		}
+		tbody{
+			vertical-align: middle;
+		}
+		td,tr,th{
+			text-align: center;
+		}
+		tr td{
+			vertical-align: middle;
+			width:200px !important;
+			height: 50px !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="export_content">
+		<!-- 头部header -->
+		<header>
+			<p class="title">技能等级评价诊断分析报告(工种)</p>
+			<p class="title_customer_representative">客户代表</p>
+			<div class="btn_box">
+				<div class="all_reports">
+					全部报告
+				</div>
+				<div class="do_talk">
+					实操报告
+				</div>
+				<div class="test_talk">
+					机考报告
+				</div>
+			</div>
+		</header>
+		<br>
+		<div class="notes">
+			注:此数据由内网移动终端统计
+		</div>
+		<!-- 主体section -->
+		<section>
+			<div class="Basic_information">
+				<span style="font-size: 26px;">
+					一、基本情况
+				</span>
+				<br><br>
+				<span style="font-size: 18px;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于2021年开展的客户代表技能等级评价，公司系统共有5家单位组织员工参与,参加机考考试13人,参加实操考试0人,
+					参加实操考试0人,最终通过2人,最终通过率为15.4%。
+				</span>
+				<br><br>
+				<p style="font-size: 18px;">
+					1.考生基本信息
+				</p>
+			</div>
+			<!-- 图表容器 -->
+			<div id="echartsBox" style="margin-top: 30px;padding: 100px 50px;border: 2px solid lightgray;height: 400px;">
+				<div id="container_one" style="height:200px"></div>
+			</div>
+			<!-- 分数 -->
+			<div class="count" style="margin-top: 20px;">
+				<p style="font-size: 18px;">
+					2.分数分布情况
+				</p>
+				<table class="table table-responsive table-bordered table-hover" style="text-align: center;vertical-align:middle;">
+				  <thead style="text-align: center;">
+				    <tr style="text-align: center;">
+				      <th>维度</th>
+				      <th>80分及以上</th>
+				      <th>80分以下</th>
+					  <th>缺考</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>人数</td>
+				      <td>2</td>
+				      <td>7</td>
+					  <td>4</td>
+				    </tr>
+				    <tr>
+				      <td>占比</td>
+				      <td>15.4%</td>
+				      <td>53.8%</td>
+					  <td>30.8%</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			
+			<!-- 员工性质分数统计 -->
+			<div class="count" style="margin-top: 20px;">
+				<p style="font-size: 18px;">
+					3.按员工性质分数统计
+				</p>
+				<table class="table table-responsive table-bordered table-hover" style="text-align: center;vertical-align:middle;">
+				  <thead style="text-align: center;">
+				    <tr style="text-align: center;">
+				      <th>维度</th>
+				      <th>全民</th>
+				      <th>省管产业单位</th>
+					  <th>供电服务公司</th>
+					  <th>其他</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>人数</td>
+				      <td>13</td>
+				      <td>0</td>
+				      <td>0</td>
+				      <td>0</td>
+				    </tr>
+				    <tr>
+				      <td>占比</td>
+				      <td>100%</td>
+						 <td>0%</td>
+						 <td>0%</td>
+						 <td>0%</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			
+			<!-- 按年龄结构分数统计 -->
+			<div class="count" style="margin-top: 20px;">
+				<p style="font-size: 26px;">
+					4.按年龄结构分数统计
+				</p>
+				<table class="table table-responsive table-bordered table-hover" style="text-align: center;vertical-align:middle;">
+				  <thead style="text-align: center;">
+				    <tr style="text-align: center;">
+				      <th>维度</th>
+				      <th>20-30岁</th>
+				      <th>31-40岁</th>
+					  <th>41-50岁</th>
+					  <th>51=55岁</th>
+					  <th>56-60岁</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>人数</td>
+				      <td>2</td>
+				      <td>5</td>
+				      <td>4</td>
+				      <td>2</td>
+					  <td>0</td>
+				    </tr>
+				    <tr>
+				      <td>占比</td>
+				      <td>15.4%</td>
+				      <td>38.5%</td>
+				      <td>30.8%</td>
+				      <td>15.4%</td>
+				      <td>0%</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			<div class="Basic_information">
+				<span style="font-size: 26px;">
+					二、按单位分析
+				</span>
+				<br><br>
+				<span style="font-size: 18px;">
+					&nbsp;&nbsp;客户代表技能等级评价有5家单位参与，分析如下
+				</span>
+				<br><br>
+				<table class="table table-responsive table-bordered table-hover" style="text-align: center;vertical-align:middle;">
+				  <thead style="text-align: center;">
+				    <tr style="text-align: center;">
+				      <th>序号</th>
+				      <th>公司简称</th>
+				      <th>实考人数</th>
+				      <th>平均分</th>
+				      <th>通过率</th>
+				      <th>全省排名</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>1</td>
+				      <td>国网连云港供电分公司</td>
+				      <td>
+						  总数:1
+						  <div id="first_one" style="height: 50px;">
+							  
+						  </div>
+					  </td>
+				      <td>
+						  <div id="list_one" style="height: 50px;">
+							  
+						  </div>
+					  </td>
+				      <td>
+						  <div id="list_six" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+				      <td>
+						  <div id="list_eleven" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>国网徐州供电分公司</td>
+				      <td>
+				      	总数:5<div id="first_two" style="height: 50px;">
+						  							  
+						  </div>
+				      </td>
+				      <td>
+						  <div id="list_two" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+				      <td>
+						  <div id="list_seven" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+				      <td>
+						  <div id="list_twelve" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+				    </tr>
+					<tr>
+					  <td>3</td>
+					  <td>国网宿迁供电分公司</td>
+					  <td>
+					  	总数:2<div id="first_three" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_three" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_eight" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_thirteen" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					</tr>
+					<tr>
+					  <td>4</td>
+					  <td>国网盐城供电分公司</td>
+					  <td>
+					  	总数:2 <div id="first_four" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						 <div id="list_four" style="height: 50px;">
+						 							  
+						 </div>
+					  </td>
+					  <td>
+						  <div id="list_nine" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_fourteen" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					</tr>
+					<tr>
+					  <td>5</td>
+					  <td>国网镇江供电分公司</td>
+					  <td>
+					  	总数:3
+						  <div id="first_five" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_five" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_ten" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					  <td>
+						  <div id="list_fifteen" style="height: 50px;">
+						  							  
+						  </div>
+					  </td>
+					</tr>
+				  </tbody>
+				</table>
+			</div>
+			<!-- 按实操考核试题分析 -->
+			<div class="Basic_information">
+				<span style="font-size: 26px;">
+					三、按实操考核试题分析
+				</span>
+				<div style="display: flex;align-items:center;justify-content: center;margin-top: 20;">
+					<img style="width: auto;display: block;" src="img/bgi.png"/>
+				</div>
+			</div>
+			<!-- 按评价标准分析 -->
+			<div class="Basic_information">
+				   <span style="font-size: 26px;">
+					四、按评价标准分析
+				   </span>
+					<br><br>
+					<p style="font-size: 18px;">
+						&nbsp;&nbsp;按本次评价考核设计的各等级分级解析:
+					</p>
+				
+				<div style="display: flex;align-items:center;justify-content: center;margin-top: 20;">
+					<img style="width: auto;display: block;" src="img/bgi.png"/>
+				</div>
+			</div>
+			<!-- 整体诊断分析 -->
+			<div class="Basic_information">
+				<span style="font-size: 26px;">
+					五、整体诊断分析
+				</span>
+				<br><br>
+				<p style="font-size: 18px;">
+					1.核心工作诊断
+				</p>
+				<div style="display: flex;align-items:center;justify-content: center;margin-top: 20;">
+					<img style="width: auto;display: block;" src="img/bgi.png"/>
+				</div>
+				<p style="font-size: 18px;">
+					2.有待提高的方面
+				</p><br>
+				<span style="font-size: 16px;">
+					针对本次评价考核涉及的评价点，有待提高之处如下所示:
+				</span><br>
+				<br><br>
+				<p style="font-size: 18px;">
+					3.未考核到的核心工作
+				</p><br>
+				<span style="font-size: 16px;color: #CC0000;">
+					本次未考核道德核心工作不做数据分析,请根据自身情况,巩固学习
+				</span>
+				<div style="display: flex;align-items:center;justify-content: center;margin-top: 20;">
+					<img style="width: auto;display: block;" src="img/bgi.png"/>
+				</div>
+			</div>
+		</section><br><br>
+		<!-- 底部按钮 -->
+		<footer style="margin: 0 auto;margin-top: 00px;">
+			<button class="btn btn-default" id="exportToPdf">下载图表数据</button>
+		</footer>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/pie.js"></script>
+<script type="text/javascript" src="js/pie-min.js"></script>
+<script type="text/javascript" src="js/bar.js"></script>
+<script type="text/javascript" src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js">
+	
+</script>
+<script type="text/javascript" src="js/html2canvas.min.js">
+	
+</script>
+<script type="text/javascript">
+    var downPdf = document.getElementById("exportToPdf");
+    downPdf.onclick = function () {
+        html2canvas(
+                document.getElementById("export_content"),
+                {
+                    dpi: 172,//导出pdf清晰度
+                    onrendered: function (canvas) {
+                        var contentWidth = canvas.width;
+                        var contentHeight = canvas.height;
+
+                        //一页pdf显示html页面生成的canvas高度;
+                        var pageHeight = contentWidth / 592.28 * 841.89;
+                        //未生成pdf的html页面高度
+                        var leftHeight = contentHeight;
+                        //pdf页面偏移
+                        var position = 0;
+                        //html页面生成的canvas在pdf中图片的宽高（a4纸的尺寸[595.28,841.89]）
+                        var imgWidth = 595.28;
+                        var imgHeight = 592.28 / contentWidth * contentHeight;
+
+                        var pageData = canvas.toDataURL('image/jpeg', 1.0);
+                        var pdf = new jsPDF('', 'pt', 'a4');
+
+                        //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+                        //当内容未超过pdf一页显示的范围，无需分页
+                        if (leftHeight < pageHeight) {
+                            pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
+                        } else {
+                            while (leftHeight > 0) {
+                                pdf.addImage(pageData, 'JPEG', 0, position, imgWidth, imgHeight)
+                                leftHeight -= pageHeight;
+                                position -= 841.89;
+                                //避免添加空白页
+                                if (leftHeight > 0) {
+                                    pdf.addPage();
+                                }
+                            }
+                        }
+                        pdf.save('content.pdf');
+                    },
+                    //背景设为白色（默认为黑色）
+                    background: "#fff"  
+                })
+    }
+</script>
+</html>
+
